@@ -24,6 +24,7 @@ public class FadeUIManager : MonoBehaviour
 
     private void _FadeIn()
     {
+        isAnimationCompleted = false;
         anim.Play("In");    
     }
 
@@ -34,11 +35,17 @@ public class FadeUIManager : MonoBehaviour
 
     private void _FadeOut()
     {
+        isAnimationCompleted = false;
         anim.Play("Out");
     }
 
     private void OnAnimationCompleted()
     {
         isAnimationCompleted = true;
+    }
+
+    public static bool IsAnimationCompleted()
+    {
+        return Instance.isAnimationCompleted;
     }
 }

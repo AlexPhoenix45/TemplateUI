@@ -15,6 +15,8 @@ public class SystemManager : MonoBehaviour
     private GameMode[] gameMode = null;
     private GameMode currentGameMode = null;
     private GameStatus currentGameStatus = GameStatus.BOOT;
+    
+    public static bool excludeButton = false;
 
     private void Awake()
     {
